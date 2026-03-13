@@ -1,0 +1,80 @@
+% =============================================================================
+% Project 2: Write a Research Paper
+% =============================================================================
+% Create a complete academic paper with all standard components.
+%
+% Requirements:
+% 1. Title, author, abstract
+% 2. Introduction section
+% 3. Methods section with at least one equation
+% 4. Results section with at least one table and one figure reference
+% 5. Discussion section
+% 6. Conclusion
+% 7. Bibliography with at least 5 citations
+% 8. Table of contents
+% 9. Proper cross-references (\ref, \cite)
+% 10. Headers and footers
+%
+% Topic suggestions:
+% - Analysis of sorting algorithm complexity
+% - Comparison of programming paradigms
+% - Machine learning model evaluation
+% - Network protocol performance
+% =============================================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lipsum} % For placeholder text (remove in final version)
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Your Paper Title}
+\fancyhead[R]{\thepage}
+
+\title{Your Paper Title Here}
+\author{Your Name \\ Your Institution}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+% TODO: Write a 150-word abstract
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+% TODO: Write each section
+% Use \label and \ref for cross-references
+% Use \cite for citations
+% Include at least 1 equation, 1 table, 1 figure reference
+
+\section{Introduction}
+\label{sec:intro}
+
+\section{Methods}
+\label{sec:methods}
+
+\section{Results}
+\label{sec:results}
+
+\section{Discussion}
+\label{sec:discussion}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+% TODO: Add bibliography
+\begin{thebibliography}{9}
+    % Add at least 5 entries
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,67 @@
+% =============================================================================
+% Project 1: Build a Professional Resume/CV
+% =============================================================================
+% Create a clean, professional resume using LaTeX.
+%
+% Requirements:
+% 1. Contact information header (name, email, phone, LinkedIn, GitHub)
+% 2. Education section with degree, school, dates, GPA
+% 3. Experience section with company, role, dates, bullet points
+% 4. Skills section (technical and soft skills)
+% 5. Projects section
+% 6. Clean, professional formatting (no garish colors)
+% 7. Fits on 1 page
+%
+% Hints:
+% - Use geometry for tight margins
+% - Use tabular for aligned layouts
+% - Use \hrule for horizontal dividers
+% - Consider using enumitem package for custom lists
+% =============================================================================
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top=1.5cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom section formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+
+\begin{document}
+
+% TODO: Build your complete resume below
+% Start with a centered header containing your name and contact info
+% Then add each section
+
+% === HEADER ===
+\begin{center}
+    {\LARGE\textbf{Your Full Name}} \\[3pt]
+    your.email@example.com $\mid$
+    (555) 123-4567 $\mid$
+    linkedin.com/in/yourname $\mid$
+    github.com/yourname
+\end{center}
+
+% === EDUCATION ===
+\section{Education}
+% YOUR CONTENT HERE
+
+% === EXPERIENCE ===
+\section{Experience}
+% YOUR CONTENT HERE
+
+% === PROJECTS ===
+\section{Projects}
+% YOUR CONTENT HERE
+
+% === SKILLS ===
+\section{Skills}
+% YOUR CONTENT HERE
+
+\end{document}
