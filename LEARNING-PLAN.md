@@ -8,14 +8,15 @@ between tracks as needed.
 
 ---
 
-## Track 1: Markdown (2-3 weeks)
+## Track 1: Markdown (3-4 weeks)
 
 | Week | Module | Folder | Topics |
 |------|--------|--------|--------|
 | 1 | Basics | `markdown/01-basics/` | Headings, paragraphs, emphasis, links, images, line breaks |
 | 1 | Extended | `markdown/02-extended/` | Tables, task lists, footnotes, definition lists, code blocks |
-| 2 | GitHub-Flavored | `markdown/03-github-flavored/` | GFM alerts, mermaid diagrams, math, autolinks, emoji |
-| 2-3 | Projects | `markdown/04-projects/` | README, blog post, documentation site, cheat sheet |
+| 2 | GitHub-Flavored | `markdown/03-github-flavored/` | GFM alerts, math, autolinks, emoji, diff syntax |
+| 2-3 | Mermaid Diagrams | `markdown/04-mermaid-diagrams/` | Flowcharts, sequence, class, state, ER, Gantt, git graph, mind maps, styling |
+| 3-4 | Projects | `markdown/05-projects/` | README, blog post, documentation site, cheat sheet |
 
 ## Track 2: Bash (4-6 weeks)
 

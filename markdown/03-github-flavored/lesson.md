@@ -24,6 +24,21 @@ pull requests, and comments.
 > Advises about risks or negative outcomes of certain actions.
 ```
 
+> [!NOTE]
+> Useful information that users should know.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
 ## 2. Mermaid Diagrams
 
 ````markdown
@@ -52,6 +67,7 @@ sequenceDiagram
 Inline math: `$E = mc^2$`
 
 Block math:
+
 ````markdown
 $$
 \sum_{i=1}^{n} x_i = x_1 + x_2 + \cdots + x_n
