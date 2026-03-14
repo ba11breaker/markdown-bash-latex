@@ -140,6 +140,19 @@ which command        # Find command location
 type command         # Show command type
 ```
 
+What these commands do:
+
+- `man command` opens the full manual page, including description, options,
+ and examples. Example: `man grep` explains search patterns and flags like
+ `-i` (ignore case) and `-r` (recursive).
+- `command --help` prints a short usage summary directly in the terminal.
+ Example: `ls --help` quickly lists common options such as `-l`, `-a`, and
+ `-h`.
+- `which command` shows the executable path that will run from your current
+ `PATH`. Example: `which python3` may return `/usr/bin/python3`.
+- `type command` tells whether a name is an alias, shell builtin, function,
+ or executable file. Example: `type cd` returns that `cd` is a shell builtin.
+
 ## 7. Your First Script
 
 Create a file called `hello.sh`:
@@ -149,6 +162,24 @@ Create a file called `hello.sh`:
 echo "Hello, World!"
 echo "Today is $(date)"
 echo "You are $(whoami) on $(hostname)"
+```
+
+Explanation:
+
+- `#!/bin/bash` is the shebang. It tells the system to run this file with the
+ Bash interpreter.
+- `echo "Hello, World!"` prints a fixed greeting message.
+- `echo "Today is $(date)"` runs `date` first, then inserts its output into
+ the sentence using command substitution (`$(...)`).
+- `echo "You are $(whoami) on $(hostname)"` runs `whoami` and `hostname`, then
+ combines their results into one line.
+
+Typical output looks like:
+
+```text
+Hello, World!
+Today is Sat Mar 14 10:30:21 PDT 2026
+You are alex on my-macbook
 ```
 
 Run it:
@@ -164,5 +195,9 @@ chmod +x hello.sh
 
 - The shell is your most powerful tool — learn to love it
 - Pipes (`|`) are the key to composing complex operations
-- Redirection (`>`, `>>`, `<`) controls where data flows
+- Redirection (`>`[^gt], `>>`[^ggt], `<`[^lt]) controls where data flows
 - Always use `man` when you forget syntax
+
+[^gt]: `>` redirects standard output to a file, overwriting the file if it already exists.
+[^ggt]: `>>` redirects standard output to a file by appending to the end of the file.
+[^lt]: `<` redirects a file into a command as standard input.
