@@ -8,7 +8,11 @@
 
 YOUR WORK HERE:
 
-
+|Name|Language|Stars|License|
+|:---|:------:|-----:|-------|
+|Project Alpha|Python|1200|MIT|
+|Beta Builder|JavaScript|850|Apache-2.0|
+|Gamma Docs|Go|430|GPL-3.0|
 
 ---
 
@@ -19,7 +23,9 @@ YOUR WORK HERE:
 
 YOUR WORK HERE:
 
-
+- [ ] A
+- [x] B
+- [ ] C
 
 ---
 
@@ -29,7 +35,10 @@ YOUR WORK HERE:
 
 YOUR WORK HERE:
 
+Here is a sentence with a footnote.[^1] And another. [^2]
 
+[^1]: This is the footnote content. <br>
+[^2]: This is the second footnote content.
 
 ---
 
@@ -41,9 +50,20 @@ YOUR WORK HERE:
 
 YOUR WORK HERE:
 
+<details>
+<summary>Frequently Asked Questions</summary>
 
+### Q1: What is Markdown used for?
 
----
+Markdown is used to write formatted text in a simple plain-text style. It is
+common in README files, documentation, notes, and blog posts.
+
+### Q2: Why use a collapsible section?
+
+Collapsible sections help hide extra details until the reader wants them. This
+keeps long documents easier to scan.
+
+</details>
 
 ## Task 5: Complex table
 
@@ -53,4 +73,8 @@ YOUR WORK HERE:
 
 YOUR WORK HERE:
 
-
+| Name         | Price | Platform              | Pros                                            | Cons                                      |
+|:-------------|:-----:|:----------------------|:------------------------------------------------|:------------------------------------------|
+| VS Code      | Free  | Windows, macOS, Linux | **Extensible**, fast startup, strong plugin ecosystem | Can feel *heavy* with many extensions     |
+| Sublime Text | Paid  | Windows, macOS, Linux | Very fast, clean interface, *lightweight*       | Fewer built-in features than some editors |
+| Vim          | Free  | Windows, macOS, Linux | Extremely **powerful**, keyboard-driven, highly configurable | Steep *learning curve* for beginners |
