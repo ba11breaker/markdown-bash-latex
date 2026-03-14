@@ -62,6 +62,7 @@ line break (two trailing spaces).
 ## 6. Lists
 
 ### Unordered
+
 ```markdown
 - Item one
 - Item two
@@ -71,6 +72,7 @@ line break (two trailing spaces).
 ```
 
 ### Ordered
+
 ```markdown
 1. First
 2. Second
@@ -80,6 +82,14 @@ line break (two trailing spaces).
 
 ## 7. Blockquotes
 
+Blockquotes are used to highlight quoted text, callouts, notes, or any content
+you want to visually separate from the main paragraph flow. Start each quoted
+line with a `>` character.
+
+If the blockquote spans multiple lines, keep using `>` at the start of each
+line. You can also leave a blank quoted line with just `>` to separate
+paragraphs inside the same blockquote.
+
 ```markdown
 > This is a blockquote.
 >
@@ -87,6 +97,15 @@ line break (two trailing spaces).
 >
 > > And be nested.
 ```
+
+> This is a blockquote.
+>
+> It can span multiple paragraphs.
+>
+> > And be nested.
+
+This renders as indented quoted content. Nested `>` markers create nested
+blockquotes, which are useful when quoting a quote or showing layered notes.
 
 ## 8. Code
 
