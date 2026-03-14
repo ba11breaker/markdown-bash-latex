@@ -65,6 +65,16 @@ What these commands do:
 - `cat file.txt | sort | uniq` prints the file contents, sorts the lines, and
  then removes repeated adjacent lines. The result is a sorted list of unique
  lines from `file.txt`.
+- `echo "hello" > file.txt` creates `file.txt` if it does not exist, or
+ overwrites its current contents so the file contains only `hello`.
+- `echo "world" >> file.txt` adds `world` to the end of `file.txt` without
+ deleting what was already there.
+- `command 2> errors.log` sends only error messages to `errors.log`, while
+ normal output still appears in the terminal.
+- `command &> all.log` writes both normal output and error output to
+ `all.log`, so the terminal stays quiet unless the command expects input.
+- `command < input.txt` uses the contents of `input.txt` as the command's
+ standard input, as if you had typed that data manually.
 
 ## 5. Permissions
 
@@ -75,6 +85,19 @@ chown user:group file  # Change ownership
 ls -la                 # View permissions
 ```
 
+What these commands do and what you see:
+
+- `chmod 755 script.sh` updates permissions so owner gets `rwx` and group/
+ others get `r-x`. Result: `ls -la` shows something like `-rwxr-xr-x` for
+ `script.sh`.
+- `chmod +x script.sh` adds execute permission to whoever already has read/
+ write settings. Result: the file becomes runnable as `./script.sh` (if it
+ has a valid script header and content).
+- `chown user:group file` changes the file owner and group. Result: `ls -la`
+ shows new owner/group columns for that file (often requires `sudo`).
+- `ls -la` prints a long listing with hidden files, including permission bits,
+ owner, group, size, and modified time so you can verify permission changes.
+
 Permission numbers: read=4, write=2, execute=1
 
 | Number | Permission |
@@ -84,6 +107,29 @@ Permission numbers: read=4, write=2, execute=1
 | 5 | r-x |
 | 4 | r-- |
 | 0 | --- |
+
+How Linux interprets permissions:
+
+- Permissions are stored as three groups: **owner**[^owner], **group**[^group], and
+ **others**[^others]. In `rwxr-xr-x`, the first `rwx` is owner, second `r-x` is
+ group, third `r-x` is others.
+- For **files**: `r` lets you read contents, `w` lets you modify/delete the
+ file (if directory permissions also allow), and `x` lets you execute it as a
+ program/script.
+- For **directories**: `r` lets you list names inside, `w` lets you create/
+ rename/delete entries, and `x` lets you enter/search the directory.
+- `755` means owner has full control (`7 = rwx`) while group and others can
+ read and execute (`5 = r-x`), which is common for scripts and public app
+ folders.
+- `chown user:group file` changes who owns the file, which affects which
+ permission set applies first.
+
+[^owner]: The user account that owns the file. This account gets the first
+ permission triplet.
+[^group]: A named group of users. Any user in this group gets the second
+ permission triplet.
+[^others]: All remaining users on the system who are not the owner and not in
+ the file's group. They get the third permission triplet.
 
 ## 6. Getting Help
 
