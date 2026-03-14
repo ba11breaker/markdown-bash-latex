@@ -57,6 +57,15 @@ command &> all.log         # Redirect both stdout and stderr
 command < input.txt        # Read stdin from file
 ```
 
+What these commands do:
+
+- `ls -la | grep ".txt"` first lists files in long format, then filters the
+ output to show only lines containing `.txt`. The result is a shorter list
+ that helps you quickly find text files.
+- `cat file.txt | sort | uniq` prints the file contents, sorts the lines, and
+ then removes repeated adjacent lines. The result is a sorted list of unique
+ lines from `file.txt`.
+
 ## 5. Permissions
 
 ```bash
@@ -97,6 +106,7 @@ echo "You are $(whoami) on $(hostname)"
 ```
 
 Run it:
+
 ```bash
 chmod +x hello.sh
 ./hello.sh
